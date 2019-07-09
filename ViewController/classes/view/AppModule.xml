@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="Kk23View1"
+    ViewObjectName="view.Kk23View"/>
+  <ViewUsage
+    Name="Kk23View1_1"
+    ViewObjectName="view.Kk23View1"/>
+</AppModule>

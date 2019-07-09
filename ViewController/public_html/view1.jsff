@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGridLayout id="pgl1">
+    <af:gridRow height="100%" id="gr1">
+      <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+        <!-- Content -->
+        <af:button text="button 1" id="b1"/>
+        <af:outputText value="asfdasda s dfasdfasdf " id="ot1"/>
+        <af:table value="#{bindings.Kk23View1.collectionModel}" var="row" rows="#{bindings.Kk23View1.rangeSize}"
+                  emptyText="#{bindings.Kk23View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" selectedRowKeys="#{bindings.Kk23View1.collectionModel.selectedRow}"
+                  rowSelection="multiple" fetchSize="#{bindings.Kk23View1.rangeSize}"
+                  filterModel="#{bindings.Kk23View1Query.queryDescriptor}" filterVisible="true"
+                  queryListener="#{bindings.Kk23View1Query.processQuery}" varStatus="vs" id="t1">
+          <af:column sortProperty="#{bindings.Kk23View1.hints.Nombre.name}" filterable="true" sortable="true"
+                     headerText="#{bindings.Kk23View1.hints.Nombre.label}" id="c1">
+            <af:inputText value="#{row.bindings.Nombre.inputValue}" label="#{bindings.Kk23View1.hints.Nombre.label}"
+                          required="#{bindings.Kk23View1.hints.Nombre.mandatory}"
+                          columns="#{bindings.Kk23View1.hints.Nombre.displayWidth}"
+                          maximumLength="#{bindings.Kk23View1.hints.Nombre.precision}"
+                          shortDesc="#{bindings.Kk23View1.hints.Nombre.tooltip}" id="it1">
+              <f:validator binding="#{row.bindings.Nombre.validator}"/>
+            </af:inputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.Kk23View1.hints.Numero.name}" filterable="true" sortable="true"
+                     headerText="#{bindings.Kk23View1.hints.Numero.label}" id="c2">
+            <af:inputText value="#{row.bindings.Numero.inputValue}" label="#{bindings.Kk23View1.hints.Numero.label}"
+                          required="#{bindings.Kk23View1.hints.Numero.mandatory}"
+                          columns="#{bindings.Kk23View1.hints.Numero.displayWidth}"
+                          maximumLength="#{bindings.Kk23View1.hints.Numero.precision}"
+                          shortDesc="#{bindings.Kk23View1.hints.Numero.tooltip}" id="it2">
+              <f:validator binding="#{row.bindings.Numero.validator}"/>
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.Kk23View1.hints.Numero.format}"/>
+            </af:inputText>
+          </af:column>
+        </af:table>
+      </af:gridCell>
+    </af:gridRow>
+  </af:panelGridLayout>
+</ui:composition>

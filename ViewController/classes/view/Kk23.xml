@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Kk23"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="kk23"
+  AliasName="Kk23"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Nombre"
+    Domain="view.Tinytext1"
+    ColumnName="nombre"
+    SQLType="STRUCT"
+    Type="view.common.Tinytext1"
+    ColumnType="TINYTEXT"
+    TableName="kk23"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Numero"
+    ColumnName="numero"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="kk23"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="Kk23PrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="Kk23Primary_Key"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="view.Kk23.Nombre"/>
+      <Item Value="view.Kk23.Numero"/>
+    </AttrArray>
+  </Key>
+</Entity>
