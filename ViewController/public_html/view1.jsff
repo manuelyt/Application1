@@ -6,7 +6,7 @@
       <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
         <!-- Content -->
         <af:button text="button 1" id="b1"/> 
-        <af:outputText value="asfdasda s dfasdfasdf " id="ot1"/>
+        <af:outputText value="asfdasda s dfas222dfasdf " id="ot1"/>
         <af:table value="#{bindings.Kk23View1.collectionModel}" var="row" rows="#{bindings.Kk23View1.rangeSize}" 
                   emptyText="#{bindings.Kk23View1.viewable ? 'No data to display.' : 'Access Denied.'}"
                   rowBandingInterval="0" selectedRowKeys="#{bindings.Kk23View1.collectionModel.selectedRow}"
